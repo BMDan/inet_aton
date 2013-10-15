@@ -6,13 +6,13 @@ inet_aton()
 	# Return a value that is clearly invalid.  Note that depending on what you're feeding it to, 
 	# this might == 255.255.255.255.
 	echo -1
-	return 1
+	return -1
     fi
 
     # Only numbers and dots, only dots in the middle, never two dots in a row, and no more than three dots.
     if [[ "$1" =~ [^0-9.] || "$1" =~ ^\\. || "$1" =~ \\.$ || "$1" =~ \\.\\. || "$1" =~ \\..*\\..*\\..*\\. ]]; then
 	echo -1
-	return 1
+	return -1
     fi
 
     local val="$1"
@@ -34,4 +34,4 @@ inet_aton()
     echo $totalval
 }
 
-inet_aton 127.1
+#Usage: inet_aton 127.0.0.1
