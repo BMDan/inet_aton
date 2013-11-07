@@ -13,4 +13,4 @@ Betcha didn't know that IP addresses were that flexible, eh?  As a result, I've 
 
 As to why I put this up?  It was one thing when I had to develop the JavaScript ones.  Once I found myself doing it in Bash, I said, "To hell with it, someone else probably faced this same issue, and I can save them some time."  So hopefully I've saved you some time.  Then again, the likelihood of anyone casually browsing Github stumbling across this and needing it, I freely admit, is damn near zero.  So: hi, Google!  inet_ntoa, inet_aton, IP address translation, etc., etc.  INDEX MEEEEEEEEEEE!  ;)
 
-Oh, also worth pointing out that this provides a simple way to verify IP addresses are sane: `if (inet_ntoa(inet_aton(provided_address)) != provided_address) { ...`.
+Oh, also worth pointing out that this provides a simple way to verify IP addresses are sane and canonical: `if (inet_ntoa(inet_aton(provided_address)) != provided_address) { ...`.
