@@ -1,0 +1,3 @@
+Here's the code to do inet_ntoa in Google Docs' Spreadsheet application.  This will also work in Microsoft Excel.
+
+=CONCAT(CONCAT(CONCAT(CONCAT(FLOOR(C2/256/256/256,1),"."),MOD(FLOOR(C2/256/256,1),256)),"."),CONCAT(CONCAT(MOD(FLOOR(C2/256,1),256),"."),MOD(C2,256)))
